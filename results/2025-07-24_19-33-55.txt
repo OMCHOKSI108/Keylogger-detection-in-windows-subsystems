@@ -1,0 +1,504 @@
+**1. SUSPICIOUS FINDINGS:**
+
+1.  **Process Name/Connection:** Process with PID 188, Name:  (blank)
+    - **PID:** 188
+    - **Reason for Suspicion:**  Process has no name and no owner ("None" username). This is highly indicative of a hidden or stealthy process.
+    - **Threat Score:** 9
+
+2.  **Process Name/Connection:** Process with PID 232, Name: Registry
+    - **PID:** 232
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While "Registry" is a legitimate process, lack of ownership is highly suspicious. It could be a spoofed process name.
+    - **Threat Score:** 8
+
+3.  **Process Name/Connection:** Process with PID 736, Name: smss.exe
+    - **PID:** 736
+    - **Reason for Suspicion:** Process has no owner ("None" username). smss.exe (Session Manager) is a critical system process; it should have a SYSTEM owner.
+    - **Threat Score:** 9
+
+4.  **Process Name/Connection:** Process with PID 868, Name: svchost.exe
+    - **PID:** 868
+    - **Reason for Suspicion:** Process has no owner ("None" username). svchost.exe is a legitimate system process, but numerous instances with no owner are suspicious. This could indicate malware masking itself.
+    - **Threat Score:** 7
+
+5.  **Process Name/Connection:** Process with PID 1128, Name: csrss.exe
+    - **PID:** 1128
+    - **Reason for Suspicion:** Process has no owner ("None" username). csrss.exe (Client Server Runtime Subsystem) is a critical system process and should have an owner.
+    - **Threat Score:** 9
+
+6.  **Process Name/Connection:** Process with PID 1232, Name: wininit.exe
+    - **PID:** 1232
+    - **Reason for Suspicion:** Process has no owner ("None" username). wininit.exe is a critical system process and should have a SYSTEM owner.
+    - **Threat Score:** 9
+
+7.  **Process Name/Connection:** Process with PID 1240, Name: csrss.exe
+    - **PID:** 1240
+    - **Reason for Suspicion:** Process has no owner ("None" username). csrss.exe (Client Server Runtime Subsystem) is a critical system process and should have an owner.
+    - **Threat Score:** 9
+
+8.  **Process Name/Connection:** Process with PID 1300, Name: svchost.exe
+    - **PID:** 1300
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+9.  **Process Name/Connection:** Process with PID 1308, Name: services.exe
+    - **PID:** 1308
+    - **Reason for Suspicion:** Process has no owner ("None" username). While a similar name to legitimate processes,  the lack of owner is highly suspicious.
+    - **Threat Score:** 8
+
+10. **Process Name/Connection:** Process with PID 1328, Name: LsaIso.exe
+    - **PID:** 1328
+    - **Reason for Suspicion:** Process has no owner ("None" username).  LsaIso.exe (Local Security Authority Isolation) is a system process, but a lack of owner is highly suspicious.
+    - **Threat Score:** 8
+
+11. **Process Name/Connection:** Process with PID 1336, Name: lsass.exe
+    - **PID:** 1336
+    - **Reason for Suspicion:** Process has no owner ("None" username). lsass.exe (Local Security Authority Subsystem Service) is a critical system process and should have a SYSTEM owner.
+    - **Threat Score:** 10
+
+12. **Process Name/Connection:** Process with PID 1400, Name: winlogon.exe
+    - **PID:** 1400
+    - **Reason for Suspicion:** Process has no owner ("None" username). winlogon.exe is a critical system process and should have a SYSTEM owner.
+    - **Threat Score:** 9
+
+13. **Process Name/Connection:** Process with PID 1464, Name: svchost.exe
+    - **PID:** 1464
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+14. **Process Name/Connection:** Process with PID 1584, Name: fontdrvhost.exe
+    - **PID:** 1584
+    - **Reason for Suspicion:** Process has no owner ("None" username). While fontdrvhost.exe is legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+15. **Process Name/Connection:** Process with PID 1592, Name: fontdrvhost.exe
+    - **PID:** 1592
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Multiple instances of fontdrvhost.exe with no owner are suspicious.
+    - **Threat Score:** 6
+
+16. **Process Name/Connection:** Process with PID 1676, Name: WUDFHost.exe
+    - **PID:** 1676
+    - **Reason for Suspicion:** Process has no owner ("None" username). While WUDFHost.exe (Windows Driver Foundation Host) is legitimate, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+17. **Process Name/Connection:** Process with PID 1720, Name: svchost.exe
+    - **PID:** 1720
+    - **Reason for Suspicion:**  Process has numerous connections on port 135 (a common port for RPC services, but this many connections are suspicious), also has no owner ("None" username).
+    - **Threat Score:** 8
+
+
+18. **Process Name/Connection:** Process with PID 1788, Name: WUDFHost.exe
+    - **PID:** 1788
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While WUDFHost.exe (Windows Driver Foundation Host) is legitimate, multiple instances with no owner is suspicious.
+    - **Threat Score:** 6
+
+19. **Process Name/Connection:** Process with PID 1844, Name: svchost.exe
+    - **PID:** 1844
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+20. **Process Name/Connection:** Process with PID 1888, Name: svchost.exe
+    - **PID:** 1888
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+21. **Process Name/Connection:** Process with PID 1916, Name: svchost.exe
+    - **PID:** 1916
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+22. **Process Name/Connection:** Process with PID 1940, Name: dwm.exe
+    - **PID:** 1940
+    - **Reason for Suspicion:** Process has no owner ("None" username). dwm.exe (Desktop Window Manager) is a system process and should have an owner.
+    - **Threat Score:** 8
+
+23. **Process Name/Connection:** Process with PID 2004, Name: svchost.exe
+    - **PID:** 2004
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+24. **Process Name/Connection:** Process with PID 2036, Name: svchost.exe
+    - **PID:** 2036
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+25. **Process Name/Connection:** Process with PID 2044, Name: svchost.exe
+    - **PID:** 2044
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+26. **Process Name/Connection:** Process with PID 2132, Name: svchost.exe
+    - **PID:** 2132
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+27. **Process Name/Connection:** Process with PID 2144, Name: svchost.exe
+    - **PID:** 2144
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+28. **Process Name/Connection:** Process with PID 2204, Name: Code.exe
+    - **PID:** 2204
+    - **Reason for Suspicion:**  Process shows numerous connections with various statuses ("NONE") to different ports (e.g. 5355, 51771, 58674, 51981, 5353, 55406, 62268, etc.). The sheer number and the lack of established connections point to reconnaissance or a scan in progress.
+    - **Threat Score:** 9
+
+29. **Process Name/Connection:** Process with PID 2236, Name: svchost.exe
+    - **PID:** 2236
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+30. **Process Name/Connection:** Process with PID 2272, Name: svchost.exe
+    - **PID:** 2272
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+31. **Process Name/Connection:** Process with PID 2280, Name: svchost.exe
+    - **PID:** 2280
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+32. **Process Name/Connection:** Process with PID 2336, Name: svchost.exe
+    - **PID:** 2336
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+33. **Process Name/Connection:** Process with PID 2412, Name: svchost.exe
+    - **PID:** 2412
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+34. **Process Name/Connection:** Process with PID 2440, Name: svchost.exe
+    - **PID:** 2440
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+35. **Process Name/Connection:** Process with PID 2596, Name: IntelCpHDCPSvc.exe
+    - **PID:** 2596
+    - **Reason for Suspicion:** Process has no owner ("None" username). While IntelCpHDCPSvc.exe is a legitimate Intel driver, lack of ownership is unusual.
+    - **Threat Score:** 6
+
+36. **Process Name/Connection:** Process with PID 3248, Name: NetworkCap.exe
+    - **PID:** 3248
+    - **Reason for Suspicion:** Process has no owner ("None" username).  The name suggests network capture capabilities, which is suspicious without proper context or a known legitimate source.
+    - **Threat Score:** 8
+
+37. **Process Name/Connection:** Process with PID 3500, Name: OmenCap.exe
+    - **PID:** 3500
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Suggests network capture, which is suspicious without proper context or a known legitimate source.
+    - **Threat Score:** 8
+
+38. **Process Name/Connection:** Process with PID 3544, Name: NVDisplay.Container.exe
+    - **PID:** 3544
+    - **Reason for Suspicion:** Process has no owner ("None" username). While related to NVIDIA drivers, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+39. **Process Name/Connection:** Process with PID 3652, Name: SysInfoCap.exe
+    - **PID:** 3652
+    - **Reason for Suspicion:** Process has no owner ("None" username). Name suggests system information capture capabilities which is suspicious without proper context.
+    - **Threat Score:** 8
+
+40. **Process Name/Connection:** Process with PID 3760, Name: TouchpointAnalyticsClientService.exe
+    - **PID:** 3760
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+
+41. **Process Name/Connection:** Process with PID 3900, Name: MemCompression
+    - **PID:** 3900
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate (related to memory compression), lack of ownership is unusual.
+    - **Threat Score:** 6
+
+42. **Process Name/Connection:** Process with PID 3984, Name: NVDisplay.Container.exe
+    - **PID:** 3984
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate (NVIDIA), lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+43. **Process Name/Connection:** Process with PID 4008, Name: svchost.exe
+    - **PID:** 4008
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+44. **Process Name/Connection:** Process with PID 4016, Name: svchost.exe
+    - **PID:** 4016
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+45. **Process Name/Connection:** Process with PID 4024, Name: svchost.exe
+    - **PID:** 4024
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+46. **Process Name/Connection:** Process with PID 4044, Name: AppHelperCap.exe
+    - **PID:** 4044
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Suggests application helper with potential capture capabilities, which is suspicious without proper context.
+    - **Threat Score:** 7
+
+47. **Process Name/Connection:** Process with PID 4072, Name: DiagsCap.exe
+    - **PID:** 4072
+    - **Reason for Suspicion:** Process has no owner ("None" username).  The name suggests diagnostic information capture, which could be used maliciously.
+    - **Threat Score:** 7
+
+48. **Process Name/Connection:** Process with PID 4336, Name: svchost.exe
+    - **PID:** 4336
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+49. **Process Name/Connection:** Process with PID 4636, Name: WmiPrvSE.exe
+    - **PID:** 4636
+    - **Reason for Suspicion:** Process has no owner ("None" username). While WmiPrvSE.exe (Windows Management Instrumentation Provider Host) is legitimate, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+50. **Process Name/Connection:** Process with PID 4856, Name: ETDService.exe
+    - **PID:** 4856
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While potentially legitimate, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+51. **Process Name/Connection:** Process with PID 5012, Name: svchost.exe
+    - **PID:** 5012
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+52. **Process Name/Connection:** Process with PID 5140, Name: svchost.exe
+    - **PID:** 5140
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+53. **Process Name/Connection:** Process with PID 5324, Name: unsecapp.exe
+    - **PID:** 5324
+    - **Reason for Suspicion:** Process has no owner ("None" username). unsecapp.exe (Unsecured Application) is suspicious by name alone, and the missing owner makes it even more so.
+    - **Threat Score:** 8
+
+54. **Process Name/Connection:** Process with PID 5412, Name: svchost.exe
+    - **PID:** 5412
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+55. **Process Name/Connection:** Process with PID 5544, Name: svchost.exe
+    - **PID:** 5544
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+56. **Process Name/Connection:** Process with PID 5648, Name: svchost.exe
+    - **PID:** 5648
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+57. **Process Name/Connection:** Process with PID 5660, Name: svchost.exe
+    - **PID:** 5660
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+58. **Process Name/Connection:** Process with PID 5728, Name: svchost.exe
+    - **PID:** 5728
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+59. **Process Name/Connection:** Process with PID 5740, Name: OfficeClickToRun.exe
+    - **PID:** 5740
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+60. **Process Name/Connection:** Process with PID 5788, Name: svchost.exe
+    - **PID:** 5788
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+61. **Process Name/Connection:** Process with PID 5816, Name: NgcIso.exe
+    - **PID:** 5816
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+62. **Process Name/Connection:** Process with PID 5860, Name: spoolsv.exe
+    - **PID:** 5860
+    - **Reason for Suspicion:** Process has multiple listen ports (49672). While spoolsv.exe (Print Spooler) is a legitimate system process, this many open ports is suspicious.
+    - **Threat Score:** 7
+
+63. **Process Name/Connection:** Process with PID 6000, Name: svchost.exe
+    - **PID:** 6000
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+64. **Process Name/Connection:** Process with PID 6088, Name: jhi_service.exe
+    - **PID:** 6088
+    - **Reason for Suspicion:** Process has no owner ("None" username). Uncommon process name, and lack of owner is highly suspicious.
+    - **Threat Score:** 8
+
+65. **Process Name/Connection:** Process with PID 6120, Name: svchost.exe
+    - **PID:** 6120
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+66. **Process Name/Connection:** Process with PID 6160, Name: svchost.exe
+    - **PID:** 6160
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+67. **Process Name/Connection:** Process with PID 6172, Name: svchost.exe
+    - **PID:** 6172
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+68. **Process Name/Connection:** Process with PID 6192, Name: IntelAudioService.exe
+    - **PID:** 6192
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate (Intel audio), the missing owner is suspicious.
+    - **Threat Score:** 6
+
+69. **Process Name/Connection:** Process with PID 6200, Name: ipf_uf.exe
+    - **PID:** 6200
+    - **Reason for Suspicion:** Process has no owner ("None" username). Uncommon process name, and the missing owner is highly suspicious.
+    - **Threat Score:** 8
+
+70. **Process Name/Connection:** Process with PID 6212, Name: MpDefenderCoreService.exe
+    - **PID:** 6212
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate (part of Windows Defender), lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+71. **Process Name/Connection:** Process with PID 6248, Name: OneApp.IGCC.WinService.exe
+    - **PID:** 6248
+    - **Reason for Suspicion:** Process has no owner ("None" username). Uncommon process name, and lack of owner is highly suspicious.
+    - **Threat Score:** 8
+
+72. **Process Name/Connection:** Process with PID 6404, Name: RtkAudUService64.exe
+    - **PID:** 6404
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While potentially a legitimate audio driver, lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+73. **Process Name/Connection:** Process with PID 6408, Name: pg_ctl.exe
+    - **PID:** 6408
+    - **Reason for Suspicion:** Process has no owner ("None" username). pg_ctl.exe is related to PostgreSQL, which is unusual to run as a background process with no owner.
+    - **Threat Score:** 7
+
+74. **Process Name/Connection:** Process with PID 6420, Name: svchost.exe
+    - **PID:** 6420
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+75. **Process Name/Connection:** Process with PID 6428, Name: svchost.exe
+    - **PID:** 6428
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+76. **Process Name/Connection:** Process with PID 6452, Name: SECOMN64.exe
+    - **PID:** 6452
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Uncommon process name, and the missing owner is highly suspicious.
+    - **Threat Score:** 8
+
+77. **Process Name/Connection:** Process with PID 6512, Name: MsMpEng.exe
+    - **PID:** 6512
+    - **Reason for Suspicion:** Process has no owner ("None" username). MsMpEng.exe (Windows Defender) should have an owner.
+    - **Threat Score:** 7
+
+78. **Process Name/Connection:** Process with PID 6520, Name: WindscribeService.exe
+    - **PID:** 6520
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While potentially legitimate (VPN service), lack of ownership is suspicious.
+    - **Threat Score:** 6
+
+79. **Process Name/Connection:** Process with PID 6548, Name: WMIRegistrationService.exe
+    - **PID:** 6548
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+80. **Process Name/Connection:** Process with PID 6588, Name: svchost.exe
+    - **PID:** 6588
+    - **Reason for Suspicion:** Process has an established network connection to an external IP address (4.213.25.241) on port 443.  While svchost can make external connections, this warrants further investigation, especially without a known owner.
+    - **Threat Score:** 8
+
+81. **Process Name/Connection:** Process with PID 6624, Name: svchost.exe
+    - **PID:** 6624
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+82. **Process Name/Connection:** Process with PID 6676, Name: wslservice.exe
+    - **PID:** 6676
+    - **Reason for Suspicion:** Process has no owner ("None" username). wslservice.exe (Windows Subsystem for Linux service) should have an owner.
+    - **Threat Score:** 7
+
+83. **Process Name/Connection:** Process with PID 6684, Name: XtuService.exe
+    - **PID:** 6684
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate (overclocking utility), the missing owner is suspicious.
+    - **Threat Score:** 6
+
+84. **Process Name/Connection:** Process with PID 6748, Name: svchost.exe
+    - **PID:** 6748
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+85. **Process Name/Connection:** Process with PID 7312, Name: postgres.exe
+    - **PID:** 7312
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Running multiple instances of postgres.exe without an owner is suspicious.
+    - **Threat Score:** 7
+
+86. **Process Name/Connection:** Process with PID 7524, Name: BraveCrashHandler64.exe
+    - **PID:** 7524
+    - **Reason for Suspicion:** Process has no owner ("None" username). While a crash handler for Brave browser is usually legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+87. **Process Name/Connection:** Process with PID 7616, Name: conhost.exe
+    - **PID:** 7616
+    - **Reason for Suspicion:** Process has no owner ("None" username). conhost.exe (Console Host) should have an owner.
+    - **Threat Score:** 7
+
+88. **Process Name/Connection:** Process with PID 7876, Name: postgres.exe
+    - **PID:** 7876
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Running multiple instances of postgres.exe without an owner is suspicious.
+    - **Threat Score:** 7
+
+89. **Process Name/Connection:** Process with PID 7896, Name: postgres.exe
+    - **PID:** 7896
+    - **Reason for Suspicion:** Process has multiple listen ports (5432). While PostgreSQL is legitimate, this many open ports is suspicious.
+    - **Threat Score:** 7
+
+90. **Process Name/Connection:** Process with PID 7908, Name: conhost.exe
+    - **PID:** 7908
+    - **Reason for Suspicion:** Process has no owner ("None" username). conhost.exe (Console Host) should have an owner.
+    - **Threat Score:** 7
+
+91. **Process Name/Connection:** Process with PID 7912, Name: postgres.exe
+    - **PID:** 7912
+    - **Reason for Suspicion:** Process has no owner ("None" username).  Running multiple instances of postgres.exe without an owner is suspicious.
+    - **Threat Score:** 7
+
+92. **Process Name/Connection:** Process with PID 8256, Name: BraveCrashHandler.exe
+    - **PID:** 8256
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While a crash handler for Brave is usually legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+93. **Process Name/Connection:** Process with PID 8308, Name: svchost.exe
+    - **PID:** 8308
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+94. **Process Name/Connection:** Process with PID 8548, Name: svchost.exe
+    - **PID:** 8548
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+95. **Process Name/Connection:** Process with PID 8728, Name: svchost.exe
+    - **PID:** 8728
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+96. **Process Name/Connection:** Process with PID 9044, Name: chrome.exe
+    - **PID:** 9044
+    - **Reason for Suspicion:** Process shows numerous connections with various statuses ("NONE") to different ports (e.g. 1900, 53691, 53695, 53694, 53692, 53693).  While chrome does make many connections, this many 'NONE' statuses warrants a closer look.
+    - **Threat Score:** 8
+
+
+97. **Process Name/Connection:** Process with PID 9048, Name: svchost.exe
+    - **PID:** 9048
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+98. **Process Name/Connection:** Process with PID 9140, Name: AggregatorHost.exe
+    - **PID:** 9140
+    - **Reason for Suspicion:** Process has no owner ("None" username). While potentially legitimate, the missing owner is suspicious.
+    - **Threat Score:** 6
+
+99. **Process Name/Connection:** Process with PID 9208, Name: svchost.exe
+    - **PID:** 9208
+    - **Reason for Suspicion:** Process has no owner ("None" username). Multiple svchost.exe instances without owners are a strong indicator of malware.
+    - **Threat Score:** 7
+
+100. **Process Name/Connection:** Process with PID 9244, Name: RtkAudUService64.exe
+    - **PID:** 9244
+    - **Reason for Suspicion:** Process has no owner ("None" username).  While potentially legitimate (audio driver), lack of ownership is suspicious.
+    - **Threat Score:** 

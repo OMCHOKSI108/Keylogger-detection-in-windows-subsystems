@@ -1,0 +1,11 @@
+ANALYST REPORT:
+
+The system data reveals several potentially concerning elements.  First, several processes lack a clear owner (Username = None).  These include PIDs 188, 232, 736, 868, 1128, 1232, 1240, 1300, 1308, 1328, 1336, 1400, 1464, 1584, 1592, 1676, 1788, 1844, 1888, 1916, 1940, 2004, 2036, 2044, 2132, 2144, 2236, 2272, 2280, 2596, 2632, 2652, 2688, 2728, 2784, 2796, 2964, 2976, 3112, 3248, 3384, 3432, 3500, 3524, 3544, 3624, 3708, 3732, 3736, 3748, 3760, 3900, 3916, 3984, 4008, 4016, 4024, 4044, 4072, 4336, 4636, 4824, 4856, 4972, 5012, 5140, 5412, 5544, 5648, 5660, 5728, 5740, 5788, 5816, 5860, 6000, 6088, 6120, 6160, 6172, 6192, 6200, 6212, 6248, 6276, 6404, 6408, 6420, 6428, 6512, 6520, 6548, 6588, 6624, 6676, 6684, 6748, 7312, 7360, 7524, 7576, 7616, 7876, 7896, 7908, 7912, 8256, 8308, 8548, 8728, 9044, 9140, 9208, 9244, 9420, 9472, 9480, 9568, 9684, 9872, 10124, 10468, 10576, 10928, 11496, 11632, 13360, 13704, 14500, 14536, 16792, 17180, 18248, 18284. This is suspicious as processes with no owner could potentially be malicious.
+
+Secondly, while the majority of network connections appear legitimate (Chrome, Brave, etc.),  the numerous connections associated with PID 18976 (chrome.exe), particularly its various ESTABLISHED connections to different remote IPv6 addresses on port 443 and other ports, warrants closer investigation.  The sheer number of connections and various ports suggest potential exfiltration or communication with a command-and-control server.  Further analysis of network traffic associated with PID 18976 is necessary. The unusual process name 'NetworkCap.exe' (PID 3248) and other 'Cap' processes (OmenCap, AppHelperCap, DiagsCap, SysInfoCap) also warrant further examination. Although seemingly benign by name, if these are not legitimate system tools or applications knowingly installed, they could be recording system activity.
+
+
+---
+CONCLUSION:
+Verdict: POTENTIALLY SUSPICIOUS
+Justification: The presence of multiple processes without clear owners and numerous network connections from a browser process to various external servers raises suspicion of keylogger activity or other malware.
