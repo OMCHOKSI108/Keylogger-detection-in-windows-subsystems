@@ -91,4 +91,4 @@ def analyze_with_llm(system_data):
         
         return report_text
     except Exception as e:
-        return f"An error occurred during AI analysis: {e}"
+        return f"An error occurred during LLM analysis: {e}"
