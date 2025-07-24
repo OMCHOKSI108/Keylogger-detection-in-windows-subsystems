@@ -2,14 +2,14 @@ import psutil
 import subprocess
 import platform
 import os
+from dotenv import load_dotenv
 import requests
 import json
 from datetime import datetime
 
-# !! IMPORTANT: Replace with your actual Gemini API Key !!
-# It's better to load this from an environment variable or a secure config.
-# For demonstration, I'm setting it directly asYOUR_GEMINI_API_KEY_HERE you did, but be mindful in production.
-os.environ["GEMINI_API_KEY"] = "AIzaSyC2S2IYETRRJRdrWu-lL8s4M0fuU1yuujA"
+
+# Load environment variables from .env file if present
+load_dotenv()
 
 # Function to gather system data (from your original script, unchanged)
 def gather_system_data():
