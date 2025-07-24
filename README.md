@@ -1,5 +1,4 @@
-
-# 🔍 Keylogger Detection System
+# Keylogger Detection System
 
 A sophisticated Python-based system that leverages AI to detect potential keyloggers in Windows environments. This tool analyzes system processes, network connections, and startup items to identify suspicious patterns that might indicate the presence of keylogging malware.
 
