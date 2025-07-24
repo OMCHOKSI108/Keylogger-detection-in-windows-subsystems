@@ -3,24 +3,24 @@
 
 A sophisticated Python-based system that leverages AI to detect potential keyloggers in Windows environments. This tool analyzes system processes, network connections, and startup items to identify suspicious patterns that might indicate the presence of keylogging malware.
 
-## ⭐ Features
+##  Features
 
-- 🔍 **Real-time System Analysis**
+-  **Real-time System Analysis**
   - Monitors running processes
   - Tracks network connections
   - Analyzes startup items
   
-- 🤖 **AI-Powered Detection**
+-  **AI-Powered Detection**
   - Utilizes Google's Gemini AI
   - Provides probability scores
   - Offers detailed reasoning
   
-- 🛡️ **Security Recommendations**
+-  **Security Recommendations**
   - Actionable security suggestions
   - Risk mitigation strategies
   - System hardening tips
 
-## 📋 Requirements
+##  Requirements
 
 - Python 3.8+
 - Windows OS
@@ -28,7 +28,7 @@ A sophisticated Python-based system that leverages AI to detect potential keylog
 - Google Gemini API key
 - Required Python packages (see `requirements.txt`)
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. **Clone & Setup:**
    ```bash
@@ -54,7 +54,7 @@ A sophisticated Python-based system that leverages AI to detect potential keylog
    python project_detection.py
    ```
 
-## 💻 Scripts
+##  Scripts
 
 ### `project_detection.py`
 - Main detection script using Gemini 2.5 Flash
@@ -67,7 +67,7 @@ A sophisticated Python-based system that leverages AI to detect potential keylog
 - Simplified analysis approach
 - Basic reporting format
 
-## 📊 Sample Output
+## Sample Output
 
 ```json
 {
@@ -81,14 +81,14 @@ A sophisticated Python-based system that leverages AI to detect potential keylog
 }
 ```
 
-## 🔒 Security Notes
+##  Security Notes
 
 - Never commit API keys
 - Keep dependencies updated
 - Regular system scans recommended
 - Follow security best practices
 
-## 📝 Method
+##  Method
 
 1. **Data Collection**
    - Process enumeration via `psutil`
@@ -105,16 +105,16 @@ A sophisticated Python-based system that leverages AI to detect potential keylog
    - Human-readable output
    - Actionable insights
 
-## 📚 Documentation
+##  Documentation
 
 For detailed information about:
 - System requirements
 - API documentation
 - Security guidelines
 
-Visit our [Wiki](https://github.com/OMCHOKSI108/Keylogger-detection-in-windows-subsystems/wiki)
+Visit our [Wiki](https://github.com/OMCHOKSI108/Keylogger-detection-in-windows-subsystems/)
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create feature branch
@@ -122,6 +122,5 @@ Visit our [Wiki](https://github.com/OMCHOKSI108/Keylogger-detection-in-windows-s
 4. Push to branch
 5. Open pull request
 
-## 📄 License
-
+##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
