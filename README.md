@@ -15,6 +15,7 @@ This project provides Python scripts to detect potential keyloggers on Windows s
 - Sends data to Gemini 2.5 Flash for analysis.
 - Prints probability of keylogger presence, reasoning, and security suggestions.
 - Handles API responses and errors robustly.
+- also in GUI format first click on SCAN button and then see results
 
 ### `keylogger.py`
 - Similar to project_detection.py, but uses Gemini Pro model.
@@ -52,7 +53,7 @@ This project provides Python scripts to detect potential keyloggers on Windows s
 
 5. **Run the detection script:**
    ```powershell
-   python project_detection.py
+   python project_detection.py 
    # or
    python keylogger.py
    ```
