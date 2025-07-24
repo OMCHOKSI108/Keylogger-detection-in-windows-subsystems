@@ -1,125 +1,94 @@
-# Keylogger Detection System
 
-A sophisticated Python-based system that leverages AI to detect potential keyloggers in Windows environments. This tool analyzes system processes, network connections, and startup items to identify suspicious patterns that might indicate the presence of keylogging malware.
+# Keylogger Detection in Windows Subsystems
 
-##  Features
+This project provides Python scripts to detect potential keyloggers on Windows systems using system data analysis and Google Gemini AI models.
 
--  **Real-time System Analysis**
-  - Monitors running processes
-  - Tracks network connections
-  - Analyzes startup items
-  
--  **AI-Powered Detection**
-  - Utilizes Google's Gemini AI
-  - Provides probability scores
-  - Offers detailed reasoning
-  
--  **Security Recommendations**
-  - Actionable security suggestions
-  - Risk mitigation strategies
-  - System hardening tips
+## Features
+- **System Data Collection:** Gathers running processes, network connections, and startup items.
+- **AI-Powered Analysis:** Uses Google Gemini (Gemini Pro or Gemini 2.5 Flash) to analyze system data for suspicious patterns.
+- **JSON Output:** Returns a probability score, reasoning, and actionable security suggestions.
 
-##  Requirements
+## Scripts Overview
 
-- Python 3.8+
-- Windows OS
-- Internet connection
-- Google Gemini API key
-- Required Python packages (see `requirements.txt`)
+### project_detection.py
+- Collects system data (processes, network, startup items).
+- Sends data to Gemini 2.5 Flash for analysis.
+- Prints probability of keylogger presence, reasoning, and security suggestions.
+- Handles API responses and errors robustly.
 
-##  Quick Start
+### `keylogger.py`
+- Similar to project_detection.py, but uses Gemini Pro model.
+- Gathers system data and sends to Gemini for analysis.
+- Prints results in a user-friendly format.
 
-1. **Clone & Setup:**
-   ```bash
+## How to Run
+
+1. **Clone the repository:**
+   ```powershell
    git clone https://github.com/OMCHOKSI108/Keylogger-detection-in-windows-subsystems.git
    cd Keylogger-detection-in-windows-subsystems
+   ```
+
+2. **Set up a Python virtual environment:**
+   ```powershell
    python -m venv venv
    .\venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```powershell
    pip install -r requirements.txt
    ```
 
-2. **Configure API Key:**
-   - Create `.env` file:
-     ```env
-     GEMINI_API_KEY=your_gemini_api_key_here
+4. **Set your Gemini API key:**
+   - Create a .env file in the project root:
      ```
-   - Or set environment variable:
+     GEMINI_API_KEY=your_actual_gemini_api_key_here
+     ```
+   - Or set it in your shell before running:
      ```powershell
-     $env:GEMINI_API_KEY="your_gemini_api_key_here"
+     $env:GEMINI_API_KEY="your_actual_gemini_api_key_here"
      ```
 
-3. **Run Detection:**
-   ```bash
+5. **Run the detection script:**
+   ```powershell
    python project_detection.py
+   # or
+   python keylogger.py
    ```
 
-##  Scripts
+## Method Used
+- **System Data Collection:** Uses `psutil` and PowerShell to gather process, network, and startup information.
+- **AI Analysis:** Sends a structured prompt to Gemini via REST API, requesting JSON-formatted results.
+- **Security:** API key is loaded from environment variable or `.env` file (never hardcoded).
 
-### `project_detection.py`
-- Main detection script using Gemini 2.5 Flash
-- Comprehensive system analysis
-- Enhanced error handling
-- Detailed JSON output
+## Security Note
+- **Do NOT commit your API key to source control.**
+- The `.gitignore` file is configured to exclude `.env` and other sensitive files.
 
-### `keylogger.py`
-- Alternative detection using Gemini Pro
-- Simplified analysis approach
-- Basic reporting format
+## Requirements
+- Python 3.8+
+- Internet connection (for Gemini API)
+- Google Gemini API key
 
-## Sample Output
-
-```json
-{
-    "probability": 15,
-    "reasoning": "System analysis shows no immediate threats, but potential vulnerabilities detected in startup items",
-    "suggestions": [
-        "Review and clean startup programs",
-        "Update security software",
-        "Monitor unusual network activity"
-    ]
-}
+## Example Output
+```
+Keylogger Detection Results:
+Probability of Keylogger: 15%
+Reasoning: No suspicious processes found, but one startup item is unsigned.
+Suggestions:
+1. Update antivirus definitions
+2. Remove unknown startup items
+3. Monitor network connections
 ```
 
-##  Security Notes
+## License
+MIT
 
-- Never commit API keys
-- Keep dependencies updated
-- Regular system scans recommended
-- Follow security best practices
+---
 
-##  Method
+Let me know if you want this README.md automatically updated in your project!## License
+MIT
 
-1. **Data Collection**
-   - Process enumeration via `psutil`
-   - Network connection monitoring
-   - Startup item analysis
-
-2. **AI Analysis**
-   - Pattern recognition
-   - Threat probability calculation
-   - Security recommendation generation
-
-3. **Reporting**
-   - JSON-formatted results
-   - Human-readable output
-   - Actionable insights
-
-##  Documentation
-
-For detailed information about:
-- System requirements
-- API documentation
-- Security guidelines
-
-Visit our [Wiki](https://github.com/OMCHOKSI108/Keylogger-detection-in-windows-subsystems/)
-
-##  Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Open pull request
-
-##  License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+by Om Choksi
