@@ -87,9 +87,4 @@ Suggestions:
 MIT
 
 ---
-
-Let me know if you want this README.md automatically updated in your project!## License
-MIT
-
----
 by Om Choksi
